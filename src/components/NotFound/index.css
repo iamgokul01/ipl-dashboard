@@ -1,0 +1,16 @@
+/* Write your CSS here */
+
+.home-container-not-found {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: max-content;
+  font-family: Bree Serif;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  align-items: center;
+  padding-top: 5%;
+  color: white;
+  justify-content: center;
+}

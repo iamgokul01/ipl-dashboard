@@ -1,0 +1,28 @@
+* {
+  border: 1px solid red;
+}
+
+.team-card-container {
+  display: flex;
+  width: 45%;
+  border: 2px solid #475569;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 15px;
+  opacity: 0.8;
+  gap: 15px;
+  color: white;
+}
+
+.team-logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.team-match-flexbox {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
