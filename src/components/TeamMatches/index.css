@@ -47,20 +47,6 @@
 .team-banner-img {
   width: 100%;
 }
-.team-details-section {
-  width: 33%;
-}
-.match-details {
-  width: 33%;
-}
-
-.latest-match-section {
-  background-color: #0f172a;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1/3;
-}
 
 .recent-match-section {
   display: flex;

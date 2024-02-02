@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import MatchCard from '../MatchCard'
-
+import LatestMatch from '../LatestMatch'
 import './index.css'
 
 class TeamMatches extends Component {
@@ -71,24 +71,12 @@ class TeamMatches extends Component {
     const {matchDetails = {}, recentMatch = {}, isLoading} = this.state
     const {teamBannerUrl, latestMatchDetails = {}} = matchDetails
 
-    const {
-      umpires,
-      result,
-      manOfTheMatch,
-      date,
-      venue,
-      competingTeam,
-      competingTeamLogo,
-      firstInnings,
-      secondInnings,
-    } = latestMatchDetails
-
     const renderRecentMatch = recentMatch !== {}
     console.log(renderRecentMatch)
     return (
       <div className={`team-match-container ${id}`}>
         {isLoading && (
-          <div data-testid="loader" className="loader-element">
+          <div className="loader-element">
             <Loader type="Oval" color="#ffffff" height={50} width={50} />
           </div>
         )}
@@ -100,31 +88,7 @@ class TeamMatches extends Component {
           />
         </div>
         <p>Latest Matches</p>
-        <div className="latest-match-section">
-          <div className="team-details-section">
-            <p>{competingTeam}</p>
-            <p>{date}</p>
-            <p>{venue}</p>
-            <p>{result}</p>
-          </div>
-          <div className="opponent-logo-section">
-            <img
-              src={competingTeamLogo}
-              alt={`latest match ${competingTeam}`}
-            />
-          </div>
-          <div className="match-details">
-            <h1>First Innings</h1>
-            <p>{firstInnings}</p>
-            <h1>Second Innings</h1>
-            <p>{secondInnings}</p>
-            <h1>Man Of The Match</h1>
-            <p>{manOfTheMatch}</p>
-            <h1>Umpires</h1>
-            <p>{umpires}</p>
-          </div>
-        </div>
-
+        <LatestMatch data={latestMatchDetails} />
         <ul className="recent-match-section">
           {Object.keys(recentMatch).length !== 0
             ? recentMatch.map(each => <MatchCard data={each} key={each.id} />)
